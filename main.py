@@ -1,16 +1,16 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+from fastapi import FastAPI
+from products.urls import router as product_router
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+
+app=FastAPI()
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+app.include_router(router=product_router)
+@app.get('/')
+async def test():
+    return {'message':'salom dunyo'}
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+@app.get('/test')
+async def test1():
+    return {'akjsdfhkabgkab'}
