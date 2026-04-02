@@ -8,6 +8,6 @@ async def product():
 
 @router.get('/test')
 async def test():
-    return {"ajbglabgjlhb"}
+    return {"message":"salom"}
 
 
