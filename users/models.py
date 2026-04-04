@@ -13,6 +13,7 @@ class User(Base):
     last_name=Column(String(30))
     email=Column(String(50),unique=True)
     password=Column(String,nullable=False)
+    created_at = Column(DateTime, default=datetime.now())
 
 
 

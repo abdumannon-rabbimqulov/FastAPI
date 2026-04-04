@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
 # 1. Databse ulanish
-SQLALCHEMY_DATABASE_URL = "postgresql+asyncpg://user@localhost:5432/fastapi"
+SQLALCHEMY_DATABASE_URL = "postgresql://user@localhost:5432/fastapi"
 # 2. Engine yaratish (bazaga kirish )
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
