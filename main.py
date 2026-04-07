@@ -15,3 +15,4 @@ async def test():
 @app.get('/test')
 async def test1():
     return {'akjsdfhkabgkab'}
+
